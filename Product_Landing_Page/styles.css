@@ -1,0 +1,140 @@
+/* General */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px; /* This sets the base font size for rem units */
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation bar */
+#header-img {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    left: -104px;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(244, 244, 244, 0.68); /* Adjusted for better readability */
+    width: 100%;
+    padding: 0;
+    z-index: 1000; /* Ensure header stays above other content */
+}
+
+.nav-link {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #444444;
+    margin-left: 2vw; /* Moved margin into .nav-link for consistency */
+}
+
+#nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link:hover {
+    height: 100%;
+    background: linear-gradient(45deg, #0077C8, #3AB54A);
+    color: linen;
+}
+
+/* Main Section */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Adjusted for better row control */
+    width: 100%;
+    height: 100vh; /* Set to full viewport height */
+    margin: 0;
+    padding-top: 70px; /* Space for fixed header */
+    background: linear-gradient(270deg, #0077C8, #3AB54A);
+    color: #444444;
+    overflow: auto;
+}
+
+main {
+    display: block; /* Changed to block for better layout control */
+    padding: 20px;
+    margin: 20px auto;
+    width: 75%;
+    height: 100%;
+    background-color: rgba(244, 244, 244, 0.68);
+    border-radius: 10px;
+}
+
+#video {
+    /* Video sizes fuck up overflow of main content*/
+    margin: 0 auto;
+    display: block;
+}
+
+.headline {
+    font-size: 2.7rem;
+    text-align: center;
+}
+
+.subheadline {
+    text-align: center;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+li, p, blockquote, label {
+    font-size: 1.8rem;
+    text-align: justify;
+    
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    body {
+        width: 100%;
+        padding-top: 60px; /* Adjust for smaller header */
+    }
+
+    .nav-link {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    main {
+        width: 90%; /* Make main content more responsive */
+    }
+
+    #video {
+        width: 90%; /* Adjust video width */
+    }
+
+    .headline, .subheadline, li, p, blockquote, label, h2 {
+        font-size: 1.5rem; /* Reduce font sizes for mobile */
+    }
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+    border-top: 1px solid grey;
+    background-color: rgba(244, 244, 244, 0.4);
+    display: flex; /* Use flex for better alignment */
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
